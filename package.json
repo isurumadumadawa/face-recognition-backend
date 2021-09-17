@@ -15,7 +15,6 @@
     "@azure/ms-rest-js": "^2.6.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
-    "canvas": "^2.6.0",
     "config": "^3.3.2",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
