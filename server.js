@@ -1,22 +1,37 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const config = require("config");
 const app = express();
 
-// if(!config.get("jwtPrivateKey")){
-//   console.log("FATAL ERROR: jwtPrivateKey not defined ")
-//   process.exit(1);
-// }
+const environmentVariable = require("./adapters/environmentVariables")
 
-// if(!config.get("email")){
-//   console.log("FATAL ERROR: email not defined ")
-//   process.exit(1);
-// }
-// if(!config.get("password")){
-//   console.log("FATAL ERROR: password not defined ")
-//   process.exit(1);
-// }
+if(!environmentVariable.private_key){
+  console.log("FATAL ERROR: jwtPrivateKey not defined ")
+  process.exit(1);
+}
+
+if(!environmentVariable.email){
+  console.log("FATAL ERROR: email not defined ")
+  process.exit(1);
+}
+if(!environmentVariable.password){
+  console.log("FATAL ERROR: password not defined ")
+  process.exit(1);
+}
+if(!environmentVariable.databaseConnectionString){
+  console.log("FATAL ERROR: databaseConnectionString not defined ")
+  process.exit(1);
+}
+
+if(!environmentVariable.azurePrivateKey){
+  console.log("FATAL ERROR: azurePrivateKey not defined ")
+  process.exit(1);
+}
+if(!environmentVariable.azureEndPoint){
+  console.log("FATAL ERROR: azureEndPoint not defined ")
+  process.exit(1);
+}
+
 
 const environmentVariable = require("./adapters/environmentVariables");
 

@@ -1,0 +1,8 @@
+{
+"email" : "email",
+"password" : "password",
+"private_key" : "jwtPrivateKey",
+"databaseConnectionString" :"databaseConnectionString",
+"azurePrivateKey" : "azurePrivateKey",
+"azureEndPoint" :"azureEndPointword"
+}
